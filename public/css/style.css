@@ -1,0 +1,53 @@
+/* Custom CSS for fine-tuning styles */
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bin Card Styles */
+.bin-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.bin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fill Level Indicator Styles */
+.fill-level-container {
+    height: 150px; /* Fixed height for consistent look */
+    width: 25px;
+    background-color: #4A5568;
+    border-radius: 9999px; /* Pill shape */
+    overflow: hidden;
+    position: relative;
+}
+
+.fill-level-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s ease-in-out;
+}
+
+.fill-level-green {
+    background-color: #48BB78; /* Tailwind's green-500 */
+}
+
+.fill-level-yellow {
+    background-color: #ECC94B; /* Tailwind's yellow-400 */
+}
+
+.fill-level-red {
+    background-color: #F56565; /* Tailwind's red-500 */
+}
+
+/* Google Maps Dark Theme */
+.google-maps-iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(110%);
+    border-radius: 0.5rem; /* Matches Tailwind's rounded-lg */
+}
